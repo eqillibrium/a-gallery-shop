@@ -1,0 +1,29 @@
+<h1>Cart {{cart.paintings.length}}</h1>
+
+<div id="cart">
+    {{#if cart.paintings.length}}
+        <table>
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th>Количество</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each cart.paintings}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{count}}</td>
+                    <td>
+                        <button class="btn btn-small js-remove" data-id="{{id}}">Удалить</button>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        <p><strong>Цена: </strong><span class="price">{{cart.amount}}</span></p>
+    {{else}}
+        <p>Корзина пуста</p>
+    {{/if}}
+</div>

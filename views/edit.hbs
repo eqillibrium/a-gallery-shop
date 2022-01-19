@@ -1,0 +1,43 @@
+<h1>Редактировать {{painting.title}}</h1>
+
+<form action="/gallery/edit" method="post">
+    <div class="input-field">
+        <input
+                id="title"
+                name="title"
+                type="text"
+                class="validate"
+                value="{{painting.title}}"
+                required>
+        <label for="title">Название картины</label>
+        <span class="helper-text" data-error="Введите название"></span>
+    </div>
+
+    <div class="input-field">
+        <input
+                id="price"
+                name="price"
+                type="number"
+                class="validate"
+                value="{{painting.price}}"
+                required
+                min="2">
+        <label for="price">Стоимость картины</label>
+        <span class="helper-text" data-error="Введите цену"></span>
+    </div>
+
+    <div class="input-field">
+        <input
+                id="image"
+                name="image"
+                type="text"
+                class="validate"
+                value="{{painting.image}}"
+                required
+                min="2">
+        <label for="image">Ссылка на изображение</label>
+        <span class="helper-text" data-error="Укажите ссылку"></span>
+    </div>
+    <input type="hidden" name="id" value="{{painting.id}}">
+    <button type="submit" class="btn btn-primary">Редактировать</button>
+</form>

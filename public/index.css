@@ -1,0 +1,32 @@
+.nav-wrapper {
+    padding: 0rem 2rem;
+}
+.price {
+    font-size: 1.5rem;
+}
+
+.painting {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.painting h1 {
+    margin-bottom: 1.5rem;
+}
+
+.painting img {
+    max-width: 600px;
+    height: auto;
+}
+
+.painting .price.big{
+    font-size: 1.5rem;
+}
+
+.card-action.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
